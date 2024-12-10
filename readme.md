@@ -12,14 +12,17 @@ On the Launch an instance page, I labelled the instance as "Cloud Exam Project".
 - the t2.micro instance type, and 
 - my already created key pair (for SSH)
 
-![launch an instance 1](https://github.com/dontcatchfire/cloud-exam-project/blob/main/images/CEP%20-%201.png)
+![labelling the instance](images/CEP%20-%201.png)
 
-![launch an instance 2](https://github.com/dontcatchfire/cloud-exam-project/blob/main/images/CEP%20-%202.png)
+![selecting instance type](images/CEP%20-%202.png)
 
 For Network settings, I used the default firewall security groups and allowed inbound traffic on ports 22 (SSH), 80 (HTTP), 443 (HTTPS).
 
+![network settings](images/CEP%20-%203.png)
+
 I did a quick double-check to make sure I chose the right configurations, left every other setting as is, and then launched the instance.
 
+![instance is running](images/CEP%20-%204.png)
 The instance was running. 🥳
 
 ### 2. Web Server Setup
@@ -27,13 +30,19 @@ Using Termius (an SSH client and terminal) on my machine, I navigated to the fol
 
 I then pasted my SSH access command in the terminal to SSH into the instance.
 
+![SSHing into server](images/CEP%20-%206.png)
+
 _(I learned you'd need to be in the folder/directory where your public key is located, so that your local machine and the remote instance can authenticate without any issues)._
 
 Once I was in the server, I ran the `sudo apt update` command to update the Ubuntu OS.
 
 Then I ran the `sudo apt install -y apache2` to install the Apache2 web server.
 
+![installing apache2](images/CEP%20-%20installing%20apache2.png)
+
 I copied and pasted my Public IPv4 address to confirm Apache2 was running, and it was affirmative 👍.
+
+![apache2 is running](images/CEP%20-%20apache2%20is%20running.png)
 
 ### 3. HTML Page Deployment
 The HTML page I created for this project is hosted on my GitHub account in the "cloud-exam-project" repo (this repo that you're currently view). 
