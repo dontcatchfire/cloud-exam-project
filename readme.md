@@ -12,6 +12,10 @@ On the Launch an instance page, I labelled the instance as "Cloud Exam Project".
 - the t2.micro instance type, and 
 - my already created key pair (for SSH)
 
+![launch an instance 1](https://github.com/dontcatchfire/cloud-exam-project/blob/main/images/CEP%20-%201.png)
+
+![launch an instance 2](https://github.com/dontcatchfire/cloud-exam-project/blob/main/images/CEP%20-%202.png)
+
 For Network settings, I used the default firewall security groups and allowed inbound traffic on ports 22 (SSH), 80 (HTTP), 443 (HTTPS).
 
 I did a quick double-check to make sure I chose the right configurations, left every other setting as is, and then launched the instance.
