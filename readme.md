@@ -12,7 +12,7 @@ On the Launch an instance page, I labelled the instance as "Cloud Exam Project".
 - the t2.micro instance type, and 
 - my already created key pair (for SSH)
 
-![labelling the instance](images/CEP%20-%201.png)
+![labelling the instance](/images/CEP%20-%201.png)
 
 ![selecting instance type](images/CEP%20-%202.png)
 
@@ -47,12 +47,22 @@ I copied and pasted my Public IPv4 address to confirm Apache2 was running, and i
 ### 3. HTML Page Deployment
 The HTML page I created for this project is hosted on my GitHub account in the "cloud-exam-project" repo (this repo that you're currently view). 
 
+![html file on local machine](images/CEP%20-%208.png)
+
+![github repo](images/CEP%20-%209.png)
+
 So, to download the project from the repository unto the server, I ran the commands 
 `wget https://github.com/dontcatchfire/cloud-exam-project.git` and `wget https://github.com/dontcatchfire/cloud-exam-project/archive/refs/heads/main.zip`
 
+![wget commands](images/CEP%20-%20wget%20commands.png)
+
 I unzipped the main.zip file to extract its content. Unzipping the main.zip file created the **cloud-exam-project-main** folder, which  I cd'd into the folder to get to the index.html file.
 
+![unzipped main.zip](images/CEP%20-%2010.png)
+
 I then moved the *index.html* file into the */var/www/html/* directory using the `mv index.html /var/www/html/` command 
+
+![moved index.html to /var/www/html/](images/CEP%20-%2012.png)
 
 I revisted my IP address and my index.html file loaded up as the default landing page. 🙌
 
@@ -61,6 +71,5 @@ The networking configurations were already set to allow inbound traffic on ports
 
 ## Deliverables 
 * IP Address: 34.253.25.168
-* Screenshot showing your HTML page in a browser.
-![]()
-
+* Screenshot showing my HTML page in a browser.
+![my html page in a browser](/images/my%20html%20page%20in%20a%20browser.png)
