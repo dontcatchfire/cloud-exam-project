@@ -41,10 +41,10 @@ I unzipped the main.zip file to extract its content. Unzipping the main.zip file
 
 I then moved the *index.html* file into the */var/www/html/* directory using the `mv index.html /var/www/html/` command 
 
-I revisted my IP address and my index loaded up as the default landing page. 
+I revisted my IP address and my index.html file loaded up as the default landing page. 🙌
 
 ### 4. Networking
-The networking configuration were already set allow traffic on ports 80 and 443 during the instance provisioning. 
+The networking configurations were already set to allow inbound traffic on ports 80 and 443 during the instance provisioning. 
 
 ## Deliverables 
 * IP Address: 34.253.25.168
