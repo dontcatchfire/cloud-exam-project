@@ -84,6 +84,49 @@ The networking configurations were already set to allow inbound traffic on ports
 
 > Configure HTTPS for your web server using a free SSL certificate (e.g., Let’s Encrypt).
 
-To configure HTTPS on my Apache server, I first had to route a domain name to instance's IPv4 address.
+### Stage 1 - linking domain name to IP address
 
-To do that, I used Route 53, which is a DNS on AWS. 
+To configure HTTPS on my Apache server, I first had to route a domain name to my instance's IPv4 address.
+
+To do that, I used Route 53, which is a DNS on AWS.
+
+On Route 53 page, I selected the *Create hosted zones* option to get started.
+
+![Getting started with hosted zone](images/creating%20hosted%20zone%201.png "Getting started with hosted zone")
+
+On the next page, 
+- I typed in the domain name I'd be using to route to the server's IPv4 address (dontcatchfire.com), 
+- I selected the *public hosted zone* type to make it accessible by anyone over the Internet, and 
+- finally clicked the "Create hosted zone" button. 
+
+![Creating hosted zone](/images/creating%20hosted%20zone%202.png "Creating hosted zone")
+
+When the hosted zone for the domain name was created, it came with **NS** and **SOA** records by default. But I needed **A** and **CNAME** records for the routing. So, I clicked on the "Create record" button to create them.
+
+![Hosted zone created](images/hosted%20zone%201.png "Hosted zone created")
+
+On the "Create record" page... 
+- for the *Record name* field, I left it empty (because A records are usually reserved for root domains) 
+- for the *Record type* field, I selected the A record option 
+- and then in the *Value* field, I pasted in the server's IPv4 address
+- I left every other setting as they were and clicked on the "Create record" button.
+
+![Creating A record](images/hosted%20zone%202.png "Creating A record")
+
+The A record was successfully created. I then clicked the "Create record" button again to create the CNAME record. 
+
+![A record successfully created](images/hosted%20zone%203.png "A record successfully created")
+
+On the "Create record" page... 
+- for the *Record name* field, I put in "www" to function as a sub domain.
+- for the *Record type* field, I selected the CNAME record option 
+- and then in the *Value* field, I pasted in the root domain name
+- Every other setting was as they were. I clicked on "Create record" button to complete the whole process.
+
+![Creating CNAME record](images/hosted%20zone%204.png "Creating CNAME record")
+
+The CNAME record was successfully created.
+
+![CNAME record successfully created](images/hosted%20zone%205.png "CNAME record successfully created")
+
+### Stage 2 - Getting SSL certificate from Let's Encrypt
