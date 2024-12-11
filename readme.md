@@ -1,5 +1,8 @@
 # Cloud Engineering Second Semester Examination Project
 
+> **Quick Note:** If for whatever reason the images aren't displaying, please try a different ISP. At first, the images weren't showing up when I was on Airtel. But when I switched to MTN, the images then displayed. 
+---
+
 ## (Provision a Linux Server with a simple HTML page)
 
 This a step-by-step documentation of how I provisioned the server, installed the web server, deployed the HTML page, and configured networking.
@@ -71,5 +74,16 @@ The networking configurations were already set to allow inbound traffic on ports
 
 ## Deliverables 
 * IP Address: 34.253.25.168
+* Domain name: [dontcatchfire.com](https://dontcatchfire.com)
 * Screenshot showing my HTML page in a browser.
-![my html page in a browser](/images/my%20html%20page%20in%20a%20browser.png)
+![my html page in a browser](/images/my%20html%20page%20in%20a%20browser.png "html page without https and domain")
+* html page with with HTTPS 
+![my secure html page in a browser](images/secure%20html%20page.png "html page with https and domain")
+
+## Bonus Tasks (Optional for Extra Credit)
+
+> Configure HTTPS for your web server using a free SSL certificate (e.g., Let’s Encrypt).
+
+To configure HTTPS on my Apache server, I first had to route a domain name to instance's IPv4 address.
+
+To do that, I used Route 53, which is a DNS on AWS. 
