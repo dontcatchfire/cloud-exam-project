@@ -76,8 +76,10 @@ The networking configurations were already set to allow inbound traffic on ports
 * IP Address: 34.253.25.168
 * Domain name: [dontcatchfire.com](https://dontcatchfire.com)
 * Screenshot showing my HTML page in a browser.
+
 ![my html page in a browser](/images/my%20html%20page%20in%20a%20browser.png "html page without https and domain")
 * html page with with HTTPS 
+
 ![my secure html page in a browser](images/secure%20html%20page.png "html page with https and domain")
 
 ## Bonus Tasks (Optional for Extra Credit)
@@ -142,3 +144,9 @@ I followed the prompts by registering with my email address and choosing the dom
 ![Configuring SSL cert on apache](images/finis%20-%20configuring%20ssl%201.png "Configuring SSL cert on apache")
 
 ![Configuring SSL cert on apache - completed](images/finis%20-%20configuring%20ssl%202.png "Configuring SSL cert on apache - completed")
+
+And that's all folks. 
+
+Configuration completed and I've got SSL on my domain name now.
+
+Finis! 🏁
