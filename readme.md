@@ -130,3 +130,15 @@ The CNAME record was successfully created.
 ![CNAME record successfully created](images/hosted%20zone%205.png "CNAME record successfully created")
 
 ### Stage 2 - Getting SSL certificate from Let's Encrypt
+
+To get the SSL certificate from Let's Encrypt, I ran the command 
+
+`sudo apt install certbot python3-certbot-apache -y`  (to install Certbot and the required Apache plugin), 
+
+followed by `sudo certbot --apache` (which runs Certbot to automatically configure SSL for my domain). 
+
+I followed the prompts by registering with my email address and choosing the domain I wanted to secure.
+
+![Configuring SSL cert on apache](images/finis%20-%20configuring%20ssl%201.png "Configuring SSL cert on apache")
+
+![Configuring SSL cert on apache - completed](images/finis%20-%20configuring%20ssl%202.png "Configuring SSL cert on apache - completed")
